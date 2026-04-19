@@ -11,7 +11,7 @@ import { Mail } from "lucide-react";
 function ProductsContent() {
     const searchParams = useSearchParams();
     const type = searchParams.get("type");
-    
+
     const [activeProduct, setActiveProduct] = useState<"limbah" | "pintar">("limbah");
     const [email, setEmail] = useState("");
 
@@ -20,6 +20,7 @@ function ProductsContent() {
             setActiveProduct(type as "limbah" | "pintar");
         }
     }, [type]);
+    // test commit
 
     const data = PRODUCTS_DATA[activeProduct];
 
@@ -33,7 +34,7 @@ function ProductsContent() {
     return (
         <main className="min-h-screen bg-white overflow-x-hidden">
             <Navbar />
-            
+
             {/* Hero Header Section */}
             <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-4">
                 <div className="container mx-auto max-w-7xl text-center">
@@ -45,13 +46,13 @@ function ProductsContent() {
                     </p>
 
                     {/* Email Capture Form */}
-                    <form 
+                    <form
                         onSubmit={handleFormSubmit}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto"
                     >
                         <div className="relative w-full">
-                            <input 
-                                type="email" 
+                            <input
+                                type="email"
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -59,7 +60,7 @@ function ProductsContent() {
                                 className="w-full px-6 py-4 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#A62F54]/20 transition-all text-gray-800"
                             />
                         </div>
-                        <button 
+                        <button
                             type="submit"
                             className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#A62F54] hover:bg-[#8A2645] text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-lg active:scale-95"
                         >
@@ -75,18 +76,18 @@ function ProductsContent() {
                 <div className="container mx-auto max-w-screen-2xl">
                     <div className="bg-white rounded-[40px] border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden">
                         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1.8fr]">
-                            
+
                             {/* Left Column: Context & Toggle */}
                             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-start border-r border-gray-50">
                                 {/* Toggle Switch */}
                                 <div className="inline-flex p-1 bg-gray-100 rounded-xl mb-12 w-fit">
-                                    <button 
+                                    <button
                                         onClick={() => setActiveProduct("limbah")}
                                         className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${activeProduct === "limbah" ? "bg-[#A62F54] text-white shadow-md" : "text-gray-500 hover:text-gray-700"}`}
                                     >
                                         KelolaLimbah
                                     </button>
-                                    <button 
+                                    <button
                                         onClick={() => setActiveProduct("pintar")}
                                         className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${activeProduct === "pintar" ? "bg-[#A62F54] text-white shadow-md" : "text-gray-500 hover:text-gray-700"}`}
                                     >
@@ -133,7 +134,7 @@ function ProductsContent() {
                             {/* Right Column: Preview Placeholder */}
                             <div className={`${data.previewColor} transition-colors duration-500 p-8 md:p-12 lg:p-16 flex items-center justify-center min-h-[500px] lg:min-h-auto`}>
                                 <AnimatePresence mode="wait">
-                                    <motion.div 
+                                    <motion.div
                                         key={activeProduct}
                                         initial={{ opacity: 0, scale: 0.95, y: 20 }}
                                         animate={{ opacity: 1, scale: 1, y: 0 }}
