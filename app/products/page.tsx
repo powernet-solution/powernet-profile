@@ -6,6 +6,8 @@ import { Footer } from "@/components/sections/Footer";
 import { PRODUCTS_DATA } from "@/constants/content";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
+import KelolaImage from "@/public/image/products/Group 87.svg"
 
 function ProductsContent() {
     const searchParams = useSearchParams();
@@ -73,8 +75,9 @@ function ProductsContent() {
             <section className="pb-24 px-4 md:px-8">
                 <div className="container mx-auto max-w-screen-2xl">
                     <div className="bg-white rounded-[40px] border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden">
-                        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1.8fr]">
-                            <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-start border-r border-gray-50">
+                        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1.8fr] items-stretch">
+                            {/* Left Column */}
+                            <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-start border-r border-gray-50 h-full">
                                 <div className="inline-flex p-3 bg-[#A62F54]/5 rounded-[8px] mb-12 w-fit border border-[#A62F54]/10">
                                     <button
                                         onClick={() => setActiveProduct("limbah")}
@@ -126,26 +129,16 @@ function ProductsContent() {
                                 </AnimatePresence>
                             </div>
 
-                            {/* Right Column: Preview Placeholder */}
-                            <div className={`${data.previewColor} transition-colors duration-500 p-8 md:p-12 lg:p-16 flex items-center justify-center min-h-[500px] lg:min-h-auto`}>
-                                <AnimatePresence mode="wait">
-                                    <motion.div
-                                        key={activeProduct}
-                                        initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                                        exit={{ opacity: 0, scale: 1.05, y: -20 }}
-                                        transition={{ duration: 0.4 }}
-                                        className="w-full h-full max-w-5xl bg-white/60 backdrop-blur-sm rounded-3xl border border-white shadow-2xl flex flex-col items-center justify-center p-12 text-center"
-                                    >
-                                        <img 
-                                            src="/image/products/Frame 345 (1).svg" 
-                                            alt={data.name} 
-                                            className="w-full h-auto max-h-full object-contain"
-                                        />
-                                    </motion.div>
-                                </AnimatePresence>
+                            <div
+                                className="relative w-full min-h-[600px] h-full overflow-hidden transition-all duration-500 bg-[#fef8e6]"
+                            >
+                                <Image
+                                    src={KelolaImage}
+                                    alt="Product"
+                                    fill
+                                    className="object-contain"
+                                />
                             </div>
-
                         </div>
                     </div>
                 </div>
