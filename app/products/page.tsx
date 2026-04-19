@@ -36,38 +36,74 @@ function ProductsContent() {
             <Navbar />
 
             {/* Hero Header Section */}
-            <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-4">
-                <div className="container mx-auto max-w-7xl text-center">
-                    <h1 className="text-3xl md:text-5xl font-bold text-[#A62F54] mb-4">
-                        Early Access to Our Advanced Solutions
-                    </h1>
-                    <p className="text-lg md:text-xl text-gray-700 font-medium max-w-3xl mx-auto mb-12">
-                        Kelola and Pintar are currently in final development. Sign up to receive a technical brief and priority deployment once we launch.
-                    </p>
+            <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 px-4 overflow-hidden">
+                {/* Background Decorative Elements */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+                    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#A62F54]/5 rounded-full blur-[120px]" />
+                    <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-[#A62F54]/3 rounded-full blur-[100px]" />
+                </div>
 
-                    {/* Email Capture Form */}
-                    <form
-                        onSubmit={handleFormSubmit}
-                        className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto"
+                <div className="container mx-auto max-w-7xl text-center relative">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
                     >
-                        <div className="relative w-full">
-                            <input
-                                type="email"
-                                required
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="yourname@company.co.id"
-                                className="w-full px-6 py-4 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#A62F54]/20 transition-all text-gray-800"
-                            />
+                        {/* Status Badge */}
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A62F54]/10 border border-[#A62F54]/20 text-[#A62F54] text-sm font-bold mb-8">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A62F54] opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#A62F54]"></span>
+                            </span>
+                            PRE-LAUNCH ACCESS
                         </div>
-                        <button
-                            type="submit"
-                            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#A62F54] hover:bg-[#8A2645] text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-lg active:scale-95"
-                        >
-                            <span>Send Email</span>
-                            <Mail className="w-5 h-5" />
-                        </button>
-                    </form>
+
+                        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-[1.1]">
+                            Early Access to Our <br />
+                            <span className="text-[#A62F54]">Advanced Solutions</span>
+                        </h1>
+                        <p className="text-lg md:text-xl text-gray-600 font-medium max-w-2xl mx-auto mb-12 leading-relaxed">
+                            Kelola and Pintar are currently in final development. Sign up to receive a technical brief and priority deployment once we launch.
+                        </p>
+
+                        {/* Email Capture Form */}
+                        <div className="max-w-2xl mx-auto">
+                            <form 
+                                onSubmit={handleFormSubmit}
+                                className="flex flex-col sm:flex-row items-center gap-3 p-2 bg-white rounded-2xl border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] focus-within:border-[#A62F54]/30 transition-all"
+                            >
+                                <div className="relative w-full flex-1 group">
+                                    <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#A62F54] transition-colors">
+                                        <Mail className="w-5 h-5" />
+                                    </div>
+                                    <input 
+                                        type="email" 
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="yourname@company.co.id"
+                                        className="w-full pl-12 pr-6 py-4 rounded-xl focus:outline-none text-gray-800 placeholder:text-gray-400 font-medium bg-transparent"
+                                    />
+                                </div>
+                                <button 
+                                    type="submit"
+                                    className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#A62F54] hover:bg-[#8A2645] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-[#A62F54]/20 active:scale-95 whitespace-nowrap"
+                                >
+                                    <span>Get Priority Access</span>
+                                    <motion.div
+                                        animate={{ x: [0, 5, 0] }}
+                                        transition={{ repeat: Infinity, duration: 1.5 }}
+                                    >
+                                        <Mail className="w-5 h-5" />
+                                    </motion.div>
+                                </button>
+                            </form>
+                            <p className="mt-4 text-sm text-gray-400 flex items-center justify-center gap-2">
+                                <span className="w-1 h-1 rounded-full bg-gray-300" />
+                                No credit card required. Limited spots available.
+                            </p>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
