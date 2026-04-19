@@ -7,7 +7,15 @@ import { PRODUCTS_DATA } from "@/constants/content";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import KelolaImage from "@/public/image/products/Group 87.svg"
+import KelolaBG from "@/public/image/products/kelolabg.svg";
+import KelolaMockup from "@/public/image/products/kelolamockup.svg";
+import PintarBG from "@/public/image/products/pintarbg.svg";
+import PintarMockup from "@/public/image/products/pintarmockup.svg";
+
+const productImages = {
+    limbah: { bg: KelolaBG, mockup: KelolaMockup },
+    pintar: { bg: PintarBG, mockup: PintarMockup }
+};
 
 function ProductsContent() {
     const searchParams = useSearchParams();
@@ -73,21 +81,21 @@ function ProductsContent() {
             </section>
 
             <section className="pb-24 px-4 md:px-8">
-                <div className="container mx-auto max-w-screen-2xl">
-                    <div className="bg-white rounded-[40px] border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden">
-                        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1.8fr] items-stretch">
-                            {/* Left Column */}
-                            <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-start border-r border-gray-50 h-full">
-                                <div className="inline-flex p-3 bg-[#A62F54]/5 rounded-[8px] mb-12 w-fit border border-[#A62F54]/10">
+                <div className="container mx-auto max-w-[1600px]">
+                    <div className="bg-white rounded-[20px] border border-gray-100 shadow-[0_10px_40px_#FAEAB0/40] overflow-hidden">
+                        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_3.5fr] items-stretch">
+                            {/* Left Column: Container/Content */}
+                            <div className="p-6 md:p-10 lg:p-12 flex flex-col justify-start border-r border-gray-50 h-full">
+                                <div className="inline-flex p-2 bg-[#A62F54]/5 rounded-[8px] mb-8 w-fit border border-[#A62F54]/10">
                                     <button
                                         onClick={() => setActiveProduct("limbah")}
-                                        className={`px-8 py-3 rounded-[8px] text-base font-bold transition-all duration-300 ${activeProduct === "limbah" ? "bg-[#A62F54] text-white shadow-lg shadow-[#A62F54]/20" : "text-[#A62F54] hover:bg-[#A62F54]/5"}`}
+                                        className={`px-6 py-2 rounded-[8px] text-sm font-bold transition-all duration-300 ${activeProduct === "limbah" ? "bg-[#A62F54] text-white shadow-lg shadow-[#A62F54]/20" : "text-[#A62F54] hover:bg-[#A62F54]/5"}`}
                                     >
                                         KelolaLimbah
                                     </button>
                                     <button
                                         onClick={() => setActiveProduct("pintar")}
-                                        className={`px-8 py-3 rounded-[8px] text-base font-bold transition-all duration-300 ${activeProduct === "pintar" ? "bg-[#A62F54] text-white shadow-lg shadow-[#A62F54]/20" : "text-[#A62F54] hover:bg-[#A62F54]/5"}`}
+                                        className={`px-6 py-2 rounded-[8px] text-sm font-bold transition-all duration-300 ${activeProduct === "pintar" ? "bg-[#A62F54] text-white shadow-lg shadow-[#A62F54]/20" : "text-[#A62F54] hover:bg-[#A62F54]/5"}`}
                                     >
                                         PINTAR AI
                                     </button>
@@ -100,26 +108,26 @@ function ProductsContent() {
                                         animate={{ opacity: 1, x: 0 }}
                                         exit={{ opacity: 0, x: 20 }}
                                         transition={{ duration: 0.3 }}
-                                        className="flex flex-col gap-6"
+                                        className="flex flex-col gap-3"
                                     >
-                                        <h2 className="text-3xl lg:text-3xl font-bold lg:max-w-[100ch] text-gray-900 leading-tight">
+                                        <h2 className="text-xl lg:text-2xl font-bold text-gray-900 leading-tight">
                                             {data.headline}
                                         </h2>
-                                        <p className="text-lg text-gray-700 leading-relaxed">
+                                        <p className="text-base text-gray-900 leading-relaxed">
                                             {data.description}
                                         </p>
 
                                         <div className="mt-1">
-                                            <h4 className="text-lg font-bold text-gray-900 mb-6">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-3">
                                                 Modules:
                                             </h4>
-                                            <ul className="space-y-6">
+                                            <ul className="space-y-2">
                                                 {data.modules.map((module, i) => (
-                                                    <li key={i} className="flex gap-4">
-                                                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black flex-shrink-0" />
+                                                    <li key={i} className="flex gap-3">
+                                                        <div className="mt-1.5 w-1.5 h-1.5 rounded-xl bg-[#A62F54] flex-shrink-0" />
                                                         <div>
-                                                            <p className="font-bold text-gray-900">{module.title}:</p>
-                                                            <p className="text-gray-700">{module.desc}</p>
+                                                            <p className="text-base font-bold text-gray-900">{module.title}:</p>
+                                                            <p className="text-base text-gray-700 leading-snug">{module.desc}</p>
                                                         </div>
                                                     </li>
                                                 ))}
@@ -129,15 +137,47 @@ function ProductsContent() {
                                 </AnimatePresence>
                             </div>
 
-                            <div
-                                className="relative w-full min-h-[600px] h-full overflow-hidden transition-all duration-500 bg-[#fef8e6]"
-                            >
-                                <Image
-                                    src={KelolaImage}
-                                    alt="Product"
-                                    fill
-                                    className="object-contain"
-                                />
+                            {/* Right Column: Card/Image with Layering */}
+                            <div className="relative w-full overflow-hidden transition-all duration-500 bg-[#fef8e6] flex items-center justify-center">
+                                {/* Background Layer */}
+                                <div className="absolute inset-0 z-0">
+                                    <AnimatePresence mode="wait">
+                                        <motion.div
+                                            key={`${activeProduct}-bg`}
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{ duration: 0.5 }}
+                                            className="w-full h-full"
+                                        >
+                                            <Image
+                                                src={productImages[activeProduct].bg}
+                                                alt="background"
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </motion.div>
+                                    </AnimatePresence>
+                                </div>
+
+                                {/* Mockup Layer */}
+                                <div className="relative z-10 w-full h-auto px-4 md:px-6 lg:px-8">
+                                    <AnimatePresence mode="wait">
+                                        <motion.div
+                                            key={`${activeProduct}-mockup`}
+                                            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                                            exit={{ opacity: 0, scale: 1.05, y: -10 }}
+                                            transition={{ duration: 0.4 }}
+                                        >
+                                            <Image
+                                                src={productImages[activeProduct].mockup}
+                                                alt="Product Mockup"
+                                                className="w-full h-auto block"
+                                            />
+                                        </motion.div>
+                                    </AnimatePresence>
+                                </div>
                             </div>
                         </div>
                     </div>
