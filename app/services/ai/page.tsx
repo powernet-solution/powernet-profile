@@ -1,4 +1,3 @@
-"use client";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { Info, Phone } from "lucide-react";
@@ -12,25 +11,11 @@ import icon1 from "@/public/illustrations/ai/ai1.svg";
 import icon2 from "@/public/illustrations/ai/ai2.svg";
 import icon3 from "@/public/illustrations/ai/ai3.svg";
 import icon4 from "@/public/illustrations/ai/ai4.svg";
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { HeroAIAnimation } from "@/components/client/HeroAIAnimation";
+import { ScrollButton } from "@/components/ui/ScrollButton";
+import Link from "next/link";
 
 export default function AIServicePage() {
-    const heroRef = useRef<HTMLHeadingElement>(null);
-
-    useGSAP(() => {
-        if (heroRef.current) {
-            gsap.from(heroRef.current, {
-                y: 50,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power4.out",
-                delay: 0.2
-            });
-        }
-    }, { scope: heroRef });
-
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-primary selection:text-white max-w-[1920px] mx-auto overflow-x-hidden">
             <Navbar />
@@ -42,35 +27,28 @@ export default function AIServicePage() {
 
                             {/* Left Column: Content */}
                             <div className="max-w-full">
-                                <h1 ref={heroRef} className="text-2xl w-full md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.25] mb-6">
+                                <HeroAIAnimation className="text-2xl w-full md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.25] mb-6">
                                     Enterprise AI Architectures:
                                     Engineering Precision, Automating Complexity
-                                </h1>
+                                </HeroAIAnimation>
                                 <p data-aos="fade-up" data-aos-delay="200" className="text-xl w-[90%] text-gray-900 mb-8 font-medium leading-relaxed">
                                     PowerNET deploys <span className="font-bold text-gray-900">custom-engineered AI models</span>—from Computer Vision to Advanced NLP—built for high-stakes environments. We integrate high-accuracy automation directly into your infrastructure while ensuring total data sovereignty and zero workflow disruption.
                                 </p>
 
                                 <div data-aos="fade-up" data-aos-delay="400" className="flex flex-wrap items-center gap-4">
-                                    <button
-                                        className="button-ai-solution inline-flex items-center justify-center text-sm font-semibold text-primary bg-primary-50 px-6 py-3 rounded-full hover:bg-primary-100 transition-colors gap-0"
-                                        onClick={() => {
-                                            const element = document.getElementById('ai-solutions');
-                                            if (element) {
-                                                element.scrollIntoView({ behavior: 'smooth' });
-                                            }
-                                        }}
+                                    <ScrollButton
+                                        targetId="ai-solutions"
+                                        className="inline-flex items-center justify-center text-sm font-semibold text-primary bg-primary-50 px-6 py-3 rounded-full hover:bg-primary-100 transition-colors gap-0"
                                     >
                                         <span className="h-fit pr-2">Learn More</span>
                                         <i className="fi fi-rr-info leading-none h-fit pt-[1px]"></i>
-                                    </button>
-                                    <Button
-                                        variant="primary"
-                                        className="px-6 py-3 bg-primary text-white hover:bg-primary/90 rounded-full font-medium transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-0 text-sm"
-                                        onClick={() => window.location.href = '/'}
-                                    >
-                                        <span className="pr-2">Free Consultation</span>
-                                        <i className="fi fi-rr-call-outgoing leading-none h-fit pt-[1px]"></i>
-                                    </Button>
+                                    </ScrollButton>
+                                    <Link href="/">
+                                        <div className="px-6 py-3 bg-primary text-white hover:bg-primary/90 rounded-full font-medium transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-0 text-sm">
+                                            <span className="pr-2">Free Consultation</span>
+                                            <i className="fi fi-rr-call-outgoing leading-none h-fit pt-[1px]"></i>
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
 

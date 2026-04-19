@@ -1,12 +1,11 @@
-"use client";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
-import { Button } from "@/components/ui/Button";
 import { ChevronRight, Check } from "lucide-react";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import networkimage1 from "@/public/image/networkimage1.svg";
 import networkimage2 from "@/public/image/networkimage2.svg";
 import networkimage3 from "@/public/image/networkimage3.svg";
+import { ScrollButton } from "@/components/ui/ScrollButton";
 
 export default function NetworkServicePage() {
     return (
@@ -23,19 +22,14 @@ export default function NetworkServicePage() {
                             Experience comprehensive end-to-end infrastructure management powered by proactive maintenance strategies. We ensure your business achieves peak performance through ultra-fast, low-latency connectivity and robust, enterprise-grade security layers.
                         </p>
                         <div data-aos="fade-up" data-aos-delay="400">
-                            <Button
+                            <ScrollButton
+                                targetId="network-solutions"
                                 variant="primary"
                                 className="px-8 py-3 bg-primary text-white hover:bg-primary/90 rounded-full font-medium transition-colors flex items-center justify-center gap-0"
-                                onClick={() => {
-                                    const element = document.getElementById('network-solutions');
-                                    if (element) {
-                                        element.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                }}
                             >
-                                <span>Learn More</span>
+                                <span className="pr-2">Learn More</span>
                                 <i className="fi fi-rr-info leading-none h-fit pt-[1px]"></i>
-                            </Button>
+                            </ScrollButton>
                         </div>
                     </div>
                 </section>

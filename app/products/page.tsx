@@ -29,7 +29,6 @@ function ProductsContent() {
             setActiveProduct(type as "limbah" | "pintar");
         }
     }, [type]);
-    // test commit
 
     const data = PRODUCTS_DATA[activeProduct];
 
@@ -188,7 +187,7 @@ function ProductsContent() {
         </main>
     );
 }
-
+//tes
 export default function ProductsPage() {
     return (
         <Suspense fallback={
