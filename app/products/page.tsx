@@ -6,7 +6,6 @@ import { Footer } from "@/components/sections/Footer";
 import { PRODUCTS_DATA } from "@/constants/content";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
-import { Mail } from "lucide-react";
 
 function ProductsContent() {
     const searchParams = useSearchParams();
@@ -65,7 +64,7 @@ function ProductsContent() {
                             className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#A62F54] hover:bg-[#8A2645] text-white px-6 py-3 rounded-lg font-semibold transition-all"
                         >
                             <span>Send Email</span>
-                            <Mail className="w-4 h-4" />
+                            <img src="/icon/icon-wrapper-h.svg" alt="icon" className="w-5 h-5" />
                         </button>
                     </form>
                 </div>
