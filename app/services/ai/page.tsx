@@ -43,12 +43,12 @@ export default function AIServicePage() {
                                         <span className="h-fit pr-2">Learn More</span>
                                         <i className="fi fi-rr-info leading-none h-fit pt-[1px]"></i>
                                     </ScrollButton>
-                                    <Link href="/">
+                                    <a href="https://wa.me/6281298192099" target="_blank" rel="noopener noreferrer">
                                         <div className="px-6 py-3 bg-primary text-white hover:bg-primary/90 rounded-full font-medium transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-0 text-sm">
                                             <span className="pr-2">Free Consultation</span>
                                             <i className="fi fi-rr-call-outgoing leading-none h-fit pt-[1px]"></i>
                                         </div>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
 

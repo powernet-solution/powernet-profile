@@ -19,7 +19,7 @@ export const Hero = () => {
                         <Button
                             variant="primary"
                             className="px-8 py-4 text-base rounded-full shadow-lg hover:shadow-primary/20 transition-all flex items-center justify-center gap-0"
-                            onClick={() => window.location.href = '/'}
+                            onClick={() => window.open('https://wa.me/6281298192099', '_blank')}
                         >
                             <span>Free Consultation</span>
                             <i className="fi fi-rr-call-outgoing leading-none"></i>

@@ -21,7 +21,7 @@ function ProductsContent() {
     const searchParams = useSearchParams();
     const type = searchParams.get("type");
 
-    const [activeProduct, setActiveProduct] = useState<"limbah" | "pintar">("limbah");
+    const [activeProduct, setActiveProduct] = useState<"limbah" | "pintar">("pintar");
     const [email, setEmail] = useState("");
 
     useEffect(() => {
@@ -81,7 +81,7 @@ function ProductsContent() {
 
             <section className="pb-24 px-4 md:px-8">
                 <div className="container mx-auto max-w-[1600px]">
-                    <div className="bg-white rounded-[20px] border border-gray-100 shadow-[0_10px_40px_#FAEAB0/40] overflow-hidden">
+                    <div className={`bg-white rounded-[20px] border border-gray-100 overflow-hidden transition-all duration-500 shadow-[0_10px_40px_rgba(0,0,0,0.05)] ${activeProduct === "limbah" ? "shadow-[#FAEAB0]/40" : "shadow-[#f0f4ff]/60"}`}>
                         <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_3.5fr] items-stretch">
                             {/* Left Column: Container/Content */}
                             <div className="p-6 md:p-10 lg:p-12 flex flex-col justify-start border-r border-gray-50 h-full">
@@ -137,7 +137,7 @@ function ProductsContent() {
                             </div>
 
                             {/* Right Column: Card/Image with Layering */}
-                            <div className="relative w-full overflow-hidden transition-all duration-500 bg-[#fef8e6] flex items-center justify-center">
+                            <div className={`relative w-full overflow-hidden transition-all duration-500 flex items-center justify-center ${activeProduct === "limbah" ? "bg-[#fef8e6]" : "bg-[#FFF2E9]"}`}>
                                 {/* Background Layer */}
                                 <div className="absolute inset-0 z-0">
                                     <AnimatePresence mode="wait">
