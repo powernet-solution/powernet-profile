@@ -40,18 +40,18 @@ function ProductsContent() {
                     <h1 className="text-3xl md:text-5xl font-bold text-[#A62F54] mb-4">
                         Early Access to Our Advanced Solutions
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-700 font-medium max-w-4xl mx-auto mb-12">
+                    <p className="text-lg md:text-xl text-gray-900 font-medium mx-auto mb-12">
                         Kelola and Pintar are currently in final development. Sign up to receive a technical brief and priority deployment once we launch.
                     </p>
 
                     {/* Email Capture Form - Exact Flex Layout */}
-                    <form 
+                    <form
                         onSubmit={handleFormSubmit}
                         className="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-2xl mx-auto"
                     >
                         <div className="w-full sm:w-[400px]">
-                            <input 
-                                type="email" 
+                            <input
+                                type="email"
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -59,7 +59,7 @@ function ProductsContent() {
                                 className="w-full px-6 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 text-gray-800 placeholder:text-gray-400"
                             />
                         </div>
-                        <button 
+                        <button
                             type="submit"
                             className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#A62F54] hover:bg-[#8A2645] text-white px-6 py-3 rounded-lg font-semibold transition-all"
                         >
@@ -70,25 +70,21 @@ function ProductsContent() {
                 </div>
             </section>
 
-            {/* Main Showcase Section */}
             <section className="pb-24 px-4 md:px-8">
                 <div className="container mx-auto max-w-screen-2xl">
                     <div className="bg-white rounded-[40px] border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden">
                         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1.8fr]">
-
-                            {/* Left Column: Context & Toggle */}
                             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-start border-r border-gray-50">
-                                {/* Toggle Switch */}
-                                <div className="inline-flex p-1 bg-gray-100 rounded-xl mb-12 w-fit">
+                                <div className="inline-flex p-3 bg-[#A62F54]/5 rounded-[8px] mb-12 w-fit border border-[#A62F54]/10">
                                     <button
                                         onClick={() => setActiveProduct("limbah")}
-                                        className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${activeProduct === "limbah" ? "bg-[#A62F54] text-white shadow-md" : "text-gray-500 hover:text-gray-700"}`}
+                                        className={`px-8 py-3 rounded-[8px] text-base font-bold transition-all duration-300 ${activeProduct === "limbah" ? "bg-[#A62F54] text-white shadow-lg shadow-[#A62F54]/20" : "text-[#A62F54] hover:bg-[#A62F54]/5"}`}
                                     >
                                         KelolaLimbah
                                     </button>
                                     <button
                                         onClick={() => setActiveProduct("pintar")}
-                                        className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${activeProduct === "pintar" ? "bg-[#A62F54] text-white shadow-md" : "text-gray-500 hover:text-gray-700"}`}
+                                        className={`px-8 py-3 rounded-[8px] text-base font-bold transition-all duration-300 ${activeProduct === "pintar" ? "bg-[#A62F54] text-white shadow-lg shadow-[#A62F54]/20" : "text-[#A62F54] hover:bg-[#A62F54]/5"}`}
                                     >
                                         PINTAR AI
                                     </button>
@@ -103,15 +99,15 @@ function ProductsContent() {
                                         transition={{ duration: 0.3 }}
                                         className="flex flex-col gap-6"
                                     >
-                                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                                        <h2 className="text-3xl lg:text-3xl font-bold lg:max-w-[100ch] text-gray-900 leading-tight">
                                             {data.headline}
                                         </h2>
                                         <p className="text-lg text-gray-700 leading-relaxed">
                                             {data.description}
                                         </p>
 
-                                        <div className="mt-8">
-                                            <h4 className="text-lg font-bold text-gray-900 mb-6 underline decoration-[#A62F54] decoration-2 underline-offset-8">
+                                        <div className="mt-1">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-6">
                                                 Modules:
                                             </h4>
                                             <ul className="space-y-6">
@@ -141,19 +137,11 @@ function ProductsContent() {
                                         transition={{ duration: 0.4 }}
                                         className="w-full h-full max-w-5xl bg-white/60 backdrop-blur-sm rounded-3xl border border-white shadow-2xl flex flex-col items-center justify-center p-12 text-center"
                                     >
-                                        {/* Mock UI Elements */}
-                                        <div className="w-full flex-1 border-2 border-dashed border-[#A62F54]/30 rounded-2xl flex flex-col items-center justify-center gap-4">
-                                            <div className="w-20 h-20 rounded-full bg-[#A62F54]/10 flex items-center justify-center">
-                                                <i className={`fi ${activeProduct === "limbah" ? "fi-rr-recycle" : "fi-rr-brain"} text-4xl text-[#A62F54]`}></i>
-                                            </div>
-                                            <div>
-                                                <p className="text-2xl font-bold text-gray-900">{data.displayName} Platform</p>
-                                                <p className="text-gray-500 mt-2">Coming Soon: Q3 2026 Preview</p>
-                                            </div>
-                                        </div>
-                                        <p className="mt-8 text-sm font-medium text-gray-400 tracking-widest uppercase">
-                                            Placeholder for {data.name} Dashboard Mockup
-                                        </p>
+                                        <img 
+                                            src="/image/products/Frame 345 (1).svg" 
+                                            alt={data.name} 
+                                            className="w-full h-auto max-h-full object-contain"
+                                        />
                                     </motion.div>
                                 </AnimatePresence>
                             </div>
