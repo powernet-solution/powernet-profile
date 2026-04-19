@@ -9,7 +9,7 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import KelolaBG from "@/public/image/products/kelolabg.svg";
 import KelolaMockup from "@/public/image/products/kelolamockup.svg";
-import PintarBG from "@/public/image/products/pintarbg.svg";
+import PintarBG from "@/public/image/products/Frame 52215.svg";
 import PintarMockup from "@/public/image/products/pintarmockup.svg";
 
 const productImages = {
@@ -81,7 +81,7 @@ function ProductsContent() {
 
             <section className="pb-24 px-4 md:px-8">
                 <div className="container mx-auto max-w-[1600px]">
-                    <div className={`bg-white rounded-[20px] border border-gray-100 overflow-hidden transition-all duration-500 shadow-[0_10px_40px_rgba(0,0,0,0.05)] ${activeProduct === "limbah" ? "shadow-[#FAEAB0]/40" : "shadow-[#f0f4ff]/60"}`}>
+                    <div className={`bg-white rounded-[20px] border border-gray-100 overflow-hidden transition-all duration-500 shadow-[0_10px_40px_rgba(0,0,0,0.05)] ${activeProduct === "limbah" ? "shadow-[#FAEAB0]/40" : "shadow-[#FFF2E9]/60"}`}>
                         <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_3.5fr] items-stretch">
                             {/* Left Column: Container/Content */}
                             <div className="p-6 md:p-10 lg:p-12 flex flex-col justify-start border-r border-gray-50 h-full">
@@ -153,14 +153,14 @@ function ProductsContent() {
                                                 src={productImages[activeProduct].bg}
                                                 alt="background"
                                                 fill
-                                                className="object-cover"
+                                                className="object-cover scale-[1.02]"
                                             />
                                         </motion.div>
                                     </AnimatePresence>
                                 </div>
 
                                 {/* Mockup Layer */}
-                                <div className="relative z-10 w-full h-auto px-4 md:px-6 lg:px-8">
+                                <div className="relative z-10 w-full h-full p-6 md:p-10 lg:p-12">
                                     <AnimatePresence mode="wait">
                                         <motion.div
                                             key={`${activeProduct}-mockup`}
@@ -168,11 +168,13 @@ function ProductsContent() {
                                             animate={{ opacity: 1, scale: 1, y: 0 }}
                                             exit={{ opacity: 0, scale: 1.05, y: -10 }}
                                             transition={{ duration: 0.4 }}
+                                            className="w-full h-full relative"
                                         >
                                             <Image
                                                 src={productImages[activeProduct].mockup}
                                                 alt="Product Mockup"
-                                                className="w-full h-auto block"
+                                                fill
+                                                className="object-contain"
                                             />
                                         </motion.div>
                                     </AnimatePresence>
