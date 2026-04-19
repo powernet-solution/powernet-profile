@@ -49,13 +49,13 @@ export const PRODUCTS_DATA = {
         id: "pintar",
         name: "PINTAR AI",
         displayName: "Pintar AI",
-        headline: "Strategic Intelligence for Mission-Critical Operations",
-        description: "PINTAR AI integrates advanced computer vision and predictive analytics into your existing infrastructure. Designed for high-stakes environments, it transforms raw operational data into actionable strategic intelligence while ensuring total data sovereignty.",
+        headline: "AI-Driven Intelligence for Educational Personalization",
+        description: "PINTAR is an instructional management ecosystem engineered to automate curriculum personalization in high-density classrooms. We eliminate administrative burnout by transforming static student data into precise, AI-generated differentiated lesson plans.",
         modules: [
-            { title: "Cognitive Logic", desc: "Advanced neural networks for complex decision-making." },
-            { title: "Industrial Vision", desc: "Real-time object detection and anomaly monitoring." },
-            { title: "Secure Sovereignty", desc: "On-premise AI deployment ensuring maximum data privacy." },
-            { title: "Strategic Oversight", desc: "Unified dashboard for enterprise-wide intelligence." }
+            { title: "Automated Differentiation", desc: "Instant generation of lesson plans tailored to student competency profiles." },
+            { title: "Tactical Analytics", desc: "Dashboards that convert raw data into actionable instructional recommendations." },
+            { title: "Operational Efficiency", desc: "Reducing lesson planning time by up to 90% through AI automation." },
+            { title: "Integrated Ecosystem", desc: "Real-time synchronization between student LMS and teacher management tools." }
         ],
         previewColor: "bg-[#F5F8FF]" // Soft blue/cool for AI
     }
