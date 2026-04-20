@@ -113,7 +113,7 @@ export const Footer = () => {
 
                     {/* COPYRIGHT */}
                     <div className="pt-6 border-t border-gray-100 text-center">
-                        <p className="text-md md:text-xl text-gray-700 font-medium">
+                        <p className="text-lg md:text-xl text-gray-700 font-medium">
                             Copyright @ PowerNET {year || 2026}. All rights reserved
                         </p>
                     </div>
