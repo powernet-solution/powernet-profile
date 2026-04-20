@@ -18,10 +18,10 @@ export default function NetworkServicePage() {
                         <h1 data-aos="fade-up" className="text-3xl md:text-4xl lg:text-5xl w-full font-bold text-gray-900 leading-[1.15] mb-6 tracking-tight">
                             Resilient Network Architecture for High-Stake Operations
                         </h1>
-                        <p data-aos="fade-up" data-aos-delay="200" className="text-lg text-gray-900 mb-8 max-w-screen w-[80%] mx-auto leading-relaxed">
+                        <p data-aos="fade-up" data-aos-delay="100" className="text-lg text-gray-900 mb-8 max-w-screen w-[80%] mx-auto leading-relaxed">
                             Experience comprehensive end-to-end infrastructure management powered by proactive maintenance strategies. We ensure your business achieves peak performance through ultra-fast, low-latency connectivity and robust, enterprise-grade security layers.
                         </p>
-                        <div data-aos="fade-up" data-aos-delay="400" className="flex justify-center">
+                        <div data-aos="fade-up" data-aos-delay="200" className="flex justify-center">
                             <ScrollButton
                                 targetId="network-solutions"
                                 variant="primary"
@@ -53,7 +53,7 @@ export default function NetworkServicePage() {
                                     imageAlt="Private Fiber"
                                 />
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="200">
+                            <div data-aos="fade-up" data-aos-delay="100">
                                 <ServiceCard
                                     title="Full-Manage Server Infrastructure"
                                     description="Comprehensive hardware and software solutions with 24/7 monitoring. We handle performance optimization and system upgrades so your applications always run smoothly and reliably."
@@ -61,7 +61,7 @@ export default function NetworkServicePage() {
                                     imageAlt="Server Infrastructure"
                                 />
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="400">
+                            <div data-aos="fade-up" data-aos-delay="200">
                                 <ServiceCard
                                     title="Proactive Infra Management & SLA"
                                     description="Professional maintenance, security management, and proactive adaptation. Our technical team ensures constant supervision and rapid support to keep your infrastructure secure and online."
@@ -177,7 +177,7 @@ export default function NetworkServicePage() {
                                 </div>
                             </div>
 
-                            <div data-aos="fade-up" data-aos-delay="200" className="bg-white rounded-2xl p-6 lg:p-6 lg:pt-12  shadow-sm flex flex-col border border-gray-100 border-l-2 border-b-2 border-l-primary border-b-primary text-left group hover:shadow-md transition-shadow">
+                            <div data-aos="fade-up" data-aos-delay="100" className="bg-white rounded-2xl p-6 lg:p-6 lg:pt-12  shadow-sm flex flex-col border border-gray-100 border-l-2 border-b-2 border-l-primary border-b-primary text-left group hover:shadow-md transition-shadow">
                                 <div className="w-full h-24 lg:h-32 mb-6">
                                     <img src="/illustrations/network/High nnnserver 1.svg" alt="Automated Data Security" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                                 </div>
@@ -187,7 +187,7 @@ export default function NetworkServicePage() {
                                 </div>
                             </div>
 
-                            <div data-aos="fade-up" data-aos-delay="400" className="bg-white rounded-2xl p-6 lg:p-6 lg:pt-12  shadow-sm flex flex-col border border-gray-100 border-l-2 border-b-2 border-l-primary border-b-primary text-left group hover:shadow-md transition-shadow">
+                            <div data-aos="fade-up" data-aos-delay="200" className="bg-white rounded-2xl p-6 lg:p-6 lg:pt-12  shadow-sm flex flex-col border border-gray-100 border-l-2 border-b-2 border-l-primary border-b-primary text-left group hover:shadow-md transition-shadow">
                                 <div className="w-full h-24 lg:h-32 mb-6">
                                     <img src="/illustrations/network/High nnnserver (1) 1.svg" alt="On-Demand Scalability" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                                 </div>
@@ -197,7 +197,7 @@ export default function NetworkServicePage() {
                                 </div>
                             </div>
 
-                            <div data-aos="fade-up" data-aos-delay="600" className="bg-white rounded-2xl p-6 lg:p-6 lg:pt-12  shadow-sm flex flex-col border border-gray-100 border-l-2 border-b-2 border-l-primary border-b-primary text-left group hover:shadow-md transition-shadow">
+                            <div data-aos="fade-up" data-aos-delay="300" className="bg-white rounded-2xl p-6 lg:p-6 lg:pt-12  shadow-sm flex flex-col border border-gray-100 border-l-2 border-b-2 border-l-primary border-b-primary text-left group hover:shadow-md transition-shadow">
                                 <div className="w-full h-24 lg:h-32 mb-6">
                                     <img src="/illustrations/network/High nnnserver (2) 1.svg" alt="Optimized Cost Efficiency" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                                 </div>

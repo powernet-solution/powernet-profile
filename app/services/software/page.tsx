@@ -22,11 +22,11 @@ export default function SoftwareServicePage() {
                             <h1 data-aos="fade-up" className="text-2xl w-full md:text-4xl lg:text-5xl lg:max-w-[20ch] font-bold text-gray-900 leading-[1.25] mb-6">
                                 End-to-end Software Solutions to Power Your Business Growth
                             </h1>
-                            <p data-aos="fade-up" data-aos-delay="200" className="text-xl w-[80%] text-gray-900 mb-8 font-medium leading-relaxed">
+                            <p data-aos="fade-up" data-aos-delay="100" className="text-xl w-[80%] text-gray-900 mb-8 font-medium leading-relaxed">
                                 We engineer <b>high-performance software</b> to eliminate bottlenecks and automate your workflows. Our custom solutions provide the robust technical foundation needed to optimize operations and accelerate scalable business growth.
                             </p>
 
-                            <div data-aos="fade-up" data-aos-delay="400" className="flex flex-wrap items-center gap-4">
+                            <div data-aos="fade-up" data-aos-delay="200" className="flex flex-wrap items-center gap-4">
                                 <button
                                     className="inline-flex items-center justify-center text-sm font-semibold text-primary bg-primary-50 px-6 py-3 rounded-full hover:bg-primary-100 transition-colors gap-0"
                                     onClick={() => window.location.href = '/'}
@@ -87,7 +87,7 @@ export default function SoftwareServicePage() {
                         </div>
 
                         {/* 02 Seamless Integration */}
-                        <div data-aos="fade-up" data-aos-delay="200" className="py-10 md:py-0 md:px-8 first:pl-0 last:pr-0">
+                        <div data-aos="fade-up" data-aos-delay="100" className="py-10 md:py-0 md:px-8 first:pl-0 last:pr-0">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 leading-tight">
                                 <span className="block mb-1">02 Seamless</span>
                                 Integration
@@ -98,7 +98,7 @@ export default function SoftwareServicePage() {
                         </div>
 
                         {/* 03 Intelligent Automation */}
-                        <div data-aos="fade-up" data-aos-delay="400" className="py-10 md:py-0 md:px-8 first:pl-0 last:pr-0">
+                        <div data-aos="fade-up" data-aos-delay="200" className="py-10 md:py-0 md:px-8 first:pl-0 last:pr-0">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 leading-tight">
                                 <span className="block mb-1">03 Intelligent</span>
                                 Automation
@@ -109,7 +109,7 @@ export default function SoftwareServicePage() {
                         </div>
 
                         {/* 04 Data-Driven Insights */}
-                        <div data-aos="fade-up" data-aos-delay="600" className="py-10 md:py-0 md:px-8 first:pl-0 last:pr-0">
+                        <div data-aos="fade-up" data-aos-delay="300" className="py-10 md:py-0 md:px-8 first:pl-0 last:pr-0">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 leading-tight">
                                 <span className="block mb-1">04 Data-Driven</span>
                                 Insights

@@ -15,7 +15,7 @@ export const Hero = () => {
                         <br className="hidden lg:block" /> for the Modern
                         Enterprise.
                     </h1>
-                    <div data-aos="fade-up" data-aos-delay="200">
+                    <div data-aos="fade-up" data-aos-delay="100">
                         <Button
                             variant="primary"
                             className="px-8 py-4 text-base rounded-full shadow-lg hover:shadow-primary/20 transition-all flex items-center justify-center gap-0"

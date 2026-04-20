@@ -59,7 +59,7 @@ export const Workflow = () => {
                             initial="initial"
                             whileHover="hover"
                             data-aos="fade-up"
-                            data-aos-delay={index * 100}
+                            data-aos-delay={index * 50}
                             className={`p-10 md:p-12 border-gray-100 transition-colors duration-500 hover:bg-gray-50/50 group
                                 ${index % 2 === 0 ? 'md:border-r' : ''} 
                                 ${index < 4 ? 'border-b' : ''}

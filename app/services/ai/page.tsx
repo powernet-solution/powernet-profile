@@ -31,11 +31,11 @@ export default function AIServicePage() {
                                     Enterprise AI Architectures:
                                     Engineering Precision, Automating Complexity
                                 </HeroAIAnimation>
-                                <p data-aos="fade-up" data-aos-delay="200" className="text-base md:text-lg lg:text-xl w-[90%] md:w-[80%] lg:w-[90%] mx-auto lg:mx-0 text-gray-900 mb-8 font-medium leading-relaxed">
+                                <p data-aos="fade-up" data-aos-delay="100" className="text-base md:text-lg lg:text-xl w-[90%] md:w-[80%] lg:w-[90%] mx-auto lg:mx-0 text-gray-900 mb-8 font-medium leading-relaxed">
                                     PowerNET deploys <span className="font-bold text-gray-900">custom-engineered AI models</span>—from Computer Vision to Advanced NLP—built for high-stakes environments. We integrate high-accuracy automation directly into your infrastructure while ensuring total data sovereignty and zero workflow disruption.
                                 </p>
 
-                                <div data-aos="fade-up" data-aos-delay="400" className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                                <div data-aos="fade-up" data-aos-delay="200" className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                                     <ScrollButton
                                         targetId="ai-solutions"
                                         className="inline-flex items-center justify-center text-xs md:text-sm font-semibold text-primary bg-primary-50 px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-primary-100 transition-colors gap-0"
@@ -56,7 +56,7 @@ export default function AIServicePage() {
                             <div className="w-full max-w-2xl lg:ml-auto">
                                 <div className="grid grid-cols-2 border border-gray-200 bg-white">
                                     {/* Box 1 */}
-                                    <div data-aos="fade-up" data-aos-delay="100" className="p-8 md:p-12 flex flex-col items-center text-center border-r border-b border-gray-200">
+                                    <div data-aos="fade-up" data-aos-delay="50" className="p-8 md:p-12 flex flex-col items-center text-center border-r border-b border-gray-200">
                                         <div className="w-18 h-18 flex items-center justify-center mb-6">
                                             <img src={(icon1 as any).src || icon1} alt="Icon" className="w-full h-full object-contain" />
                                         </div>
@@ -65,7 +65,7 @@ export default function AIServicePage() {
                                     </div>
 
                                     {/* Box 2 */}
-                                    <div data-aos="fade-up" data-aos-delay="200" className="p-8 md:p-12 flex flex-col items-center text-center border-b border-gray-200">
+                                    <div data-aos="fade-up" data-aos-delay="100" className="p-8 md:p-12 flex flex-col items-center text-center border-b border-gray-200">
                                         <div className="w-18 h-18 flex items-center justify-center mb-6">
                                             <img src={(icon2 as any).src || icon2} alt="Icon" className="w-full h-full object-contain" />
                                         </div>
@@ -74,7 +74,7 @@ export default function AIServicePage() {
                                     </div>
 
                                     {/* Box 3 */}
-                                    <div data-aos="fade-up" data-aos-delay="300" className="p-8 md:p-12 flex flex-col items-center text-center border-r border-gray-200">
+                                    <div data-aos="fade-up" data-aos-delay="150" className="p-8 md:p-12 flex flex-col items-center text-center border-r border-gray-200">
                                         <div className="w-18 h-18 flex items-center justify-center mb-6">
                                             <img src={(icon3 as any).src || icon3} alt="Icon" className="w-full h-full object-contain" />
                                         </div>
@@ -83,7 +83,7 @@ export default function AIServicePage() {
                                     </div>
 
                                     {/* Box 4 */}
-                                    <div data-aos="fade-up" data-aos-delay="400" className="p-8 md:p-12 flex flex-col items-center text-center">
+                                    <div data-aos="fade-up" data-aos-delay="200" className="p-8 md:p-12 flex flex-col items-center text-center">
                                         <div className="w-18 h-18 flex items-center justify-center mb-6">
                                             <img src={(icon4 as any).src || icon4} alt="Icon" className="w-full h-full object-contain" />
                                         </div>
@@ -115,21 +115,21 @@ export default function AIServicePage() {
                                     imageSrc={aiimage2}
                                 />
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="200">
+                             <div data-aos="fade-up" data-aos-delay="100">
                                 <ServiceCard
                                     title="Model Training"
                                     description="Development of custom-engineered frameworks and precise fine-tuning. We optimize models using your specific datasets to achieve superior, domain-specific accuracy."
                                     imageSrc={aiimage3}
                                 />
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="400">
+                             <div data-aos="fade-up" data-aos-delay="200">
                                 <ServiceCard
                                     title="API Integration"
                                     description="Deployment of lightweight, scalable APIs designed for seamless connectivity. We ensure high-speed communication between your new AI assets and existing legacy systems."
                                     imageSrc={aiimage4}
                                 />
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="600">
+                             <div data-aos="fade-up" data-aos-delay="300">
                                 <ServiceCard
                                     title="Optimization Loop"
                                     description="Continuous monitoring to detect model drift and maintain accuracy. We use automated feedback loops to ensure your AI evolves and remains reliable as your business data grows."
@@ -158,7 +158,7 @@ export default function AIServicePage() {
                         </div>
 
                         {/* Top Middle */}
-                        <div data-aos="fade-up" data-aos-delay="100" className="col-span-1 border-b md:border-r border-gray-200 p-10 lg:p-12 flex flex-col justify-start">
+                        <div data-aos="fade-up" data-aos-delay="50" className="col-span-1 border-b md:border-r border-gray-200 p-10 lg:p-12 flex flex-col justify-start">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6">Custom-Built for You</h3>
                             <p className="text-lg lg:text-xl font-medium text-gray-900 leading-relaxed">
                                 We don't use generic tools. Every AI model is trained specifically on your business data for maximum accuracy.
@@ -166,7 +166,7 @@ export default function AIServicePage() {
                         </div>
 
                         {/* Top Right */}
-                        <div data-aos="fade-up" data-aos-delay="200" className="col-span-1 border-b border-gray-200 p-10 lg:p-12 flex flex-col justify-start">
+                        <div data-aos="fade-up" data-aos-delay="100" className="col-span-1 border-b border-gray-200 p-10 lg:p-12 flex flex-col justify-start">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Data Stays Safe</h3>
                             <p className="text-lg lg:text-xl font-medium text-gray-900 leading-relaxed">
                                 Your privacy is our priority. We deploy AI on your own servers or private cloud so your data never leaves your control.
@@ -174,7 +174,7 @@ export default function AIServicePage() {
                         </div>
 
                         {/* Bottom Middle */}
-                        <div data-aos="fade-up" data-aos-delay="300" className="col-span-1 border-b md:border-b-0 md:border-r border-gray-200 p-10 lg:p-12 lg:pb-14 flex flex-col justify-start">
+                        <div data-aos="fade-up" data-aos-delay="150" className="col-span-1 border-b md:border-b-0 md:border-r border-gray-200 p-10 lg:p-12 lg:pb-14 flex flex-col justify-start">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6">Proven Performance</h3>
                             <p className="text-lg lg:text-xl font-medium text-gray-900 leading-relaxed">
                                 We don't just promise results. Every system is rigorously tested and validated to ensure it works reliably in real-world conditions.
@@ -182,7 +182,7 @@ export default function AIServicePage() {
                         </div>
 
                         {/* Bottom Right */}
-                        <div data-aos="fade-up" data-aos-delay="400" className="col-span-1 p-10 lg:p-12 lg:pb-14 flex flex-col justify-start">
+                        <div data-aos="fade-up" data-aos-delay="200" className="col-span-1 p-10 lg:p-12 lg:pb-14 flex flex-col justify-start">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6">Easy Integration</h3>
                             <p className="text-lg lg:text-xl font-medium text-gray-900 leading-relaxed">
                                 No need to change your current software. Our AI is designed to plug directly into your existing systems without disrupting your workflow.

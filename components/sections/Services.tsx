@@ -43,7 +43,7 @@ export const Services = () => {
                         <div
                             key={service.id}
                             data-aos="fade-up"
-                            data-aos-delay={idx * 200}
+                            data-aos-delay={idx * 100}
                             className="bg-neutral-2 rounded-3xl p-8 xl:p-10 flex flex-col border border-transparent hover:border-primary/10 hover:shadow-lg transition-all duration-500 group"
                         >
                             {/* Text content */}

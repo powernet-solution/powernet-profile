@@ -14,14 +14,14 @@ export function AIProcessSection() {
                 <div className="relative flex flex-col md:flex-row items-center justify-between min-h-[500px]">
                     {/* SVG Curves Background */}
                     <div className="hidden md:block absolute inset-0 z-0 pointer-events-none">
-                        <img data-aos="fade-right" data-aos-delay="400" src="/illustrations/curve-left.svg" alt="" className="absolute right-[50%] top-1/2 -translate-y-1/2 h-64 lg:h-80 object-right object-contain w-[40%]" />
-                        <img data-aos="fade-left" data-aos-delay="400" src="/illustrations/curve-right.svg" alt="" className="absolute left-[50%] top-1/2 -translate-y-1/2 h-64 lg:h-80 object-left object-contain w-[40%]" />
+                        <img data-aos="fade-right" data-aos-delay="200" src="/illustrations/curve-left.svg" alt="" className="absolute right-[50%] top-1/2 -translate-y-1/2 h-64 lg:h-80 object-right object-contain w-[40%]" />
+                        <img data-aos="fade-left" data-aos-delay="200" src="/illustrations/curve-right.svg" alt="" className="absolute left-[50%] top-1/2 -translate-y-1/2 h-64 lg:h-80 object-left object-contain w-[40%]" />
                     </div>
 
                     {/* Left Cards */}
                     <div className="w-full md:w-[32%] flex flex-col gap-8 lg:gap-20 relative z-10">
                         {/* Card 1 */}
-                        <div data-aos="fade-right" data-aos-delay="100" className="p-[10px] rounded-2xl bg-gradient-to-r from-[#fcb6c1] to-[#fde2e6] shadow-[0_4px_20px_rgba(252,182,193,0.4)]">
+                        <div data-aos="fade-right" data-aos-delay="50" className="p-[10px] rounded-2xl bg-gradient-to-r from-[#fcb6c1] to-[#fde2e6] shadow-[0_4px_20px_rgba(252,182,193,0.4)]">
                             <div className="bg-white rounded-[14px] p-6 lg:p-8 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 lg:gap-6 h-full relative">
                                 <div className="w-18 h-18 lg:w-24 lg:h-24 flex items-center justify-center shrink-0">
                                     <img src="/illustrations/ai/ai5.svg" alt="Icon" className="w-full h-full object-contain" />
@@ -33,7 +33,7 @@ export function AIProcessSection() {
                             </div>
                         </div>
                         {/* Card 2 */}
-                        <div data-aos="fade-right" data-aos-delay="200" className="p-[10px] rounded-2xl bg-gradient-to-r from-[#fcb6c1] to-[#fde2e6] shadow-[0_4px_20px_rgba(252,182,193,0.4)]">
+                        <div data-aos="fade-right" data-aos-delay="100" className="p-[10px] rounded-2xl bg-gradient-to-r from-[#fcb6c1] to-[#fde2e6] shadow-[0_4px_20px_rgba(252,182,193,0.4)]">
                             <div className="bg-white rounded-[14px] p-6 lg:p-8 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 lg:gap-6 h-full relative">
                                 <div className="w-18 h-18 lg:w-24 lg:h-24 flex items-center justify-center shrink-0">
                                     <img src="/illustrations/ai/ai6.svg" alt="Icon" className="w-full h-full object-contain" />
@@ -47,14 +47,14 @@ export function AIProcessSection() {
                     </div>
 
                     {/* Center Logo */}
-                    <div data-aos="zoom-in" data-aos-delay="300" className="hidden md:flex w-28 h-28 lg:w-32 lg:h-32 rounded-full bg-gradient-to-b from-[#f5a19b] to-[#fef2f2] shadow-[0_10px_40px_rgba(245,161,155,0.4)] items-center justify-center relative z-20 shrink-0 mx-20">
+                    <div data-aos="zoom-in" data-aos-delay="150" className="hidden md:flex w-28 h-28 lg:w-32 lg:h-32 rounded-full bg-gradient-to-b from-[#f5a19b] to-[#fef2f2] shadow-[0_10px_40px_rgba(245,161,155,0.4)] items-center justify-center relative z-20 shrink-0 mx-20">
                         <img src="/illustrations/ai/aicenter.svg" alt="AI Center Brain" className="w-20 h-20 lg:w-22 lg:h-22 object-contain" />
                     </div>
 
                     {/* Right Cards */}
                     <div className="w-full md:w-[32%] flex flex-col gap-8 lg:gap-20 relative z-10 mt-12 md:mt-0">
                         {/* Card 3 */}
-                        <div data-aos="fade-left" data-aos-delay="100" className="p-[10px] rounded-2xl bg-gradient-to-l from-[#fcb6c1] to-[#fde2e6] shadow-[0_4px_20px_rgba(252,182,193,0.4)]">
+                        <div data-aos="fade-left" data-aos-delay="50" className="p-[10px] rounded-2xl bg-gradient-to-l from-[#fcb6c1] to-[#fde2e6] shadow-[0_4px_20px_rgba(252,182,193,0.4)]">
                             <div className="bg-white rounded-[14px] p-6 lg:p-8 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 lg:gap-6 h-full relative">
                                 <div className="w-18 h-18 lg:w-24 lg:h-24 flex items-center justify-center shrink-0">
                                     <img src="/illustrations/ai/ai7.svg" alt="Icon" className="w-full h-full object-contain" />
@@ -66,7 +66,7 @@ export function AIProcessSection() {
                             </div>
                         </div>
                         {/* Card 4 */}
-                        <div data-aos="fade-left" data-aos-delay="200" className="p-[10px] rounded-2xl bg-gradient-to-l from-[#fcb6c1] to-[#fde2e6] shadow-[0_4px_20px_rgba(252,182,193,0.4)]">
+                        <div data-aos="fade-left" data-aos-delay="100" className="p-[10px] rounded-2xl bg-gradient-to-l from-[#fcb6c1] to-[#fde2e6] shadow-[0_4px_20px_rgba(252,182,193,0.4)]">
                             <div className="bg-white rounded-[14px] p-6 lg:p-8 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 lg:gap-6 h-full relative">
                                 <div className="w-18 h-18 lg:w-24 lg:h-24 flex items-center justify-center shrink-0">
                                     <img src="/illustrations/ai/ai8.svg" alt="Icon" className="w-full h-full object-contain" />

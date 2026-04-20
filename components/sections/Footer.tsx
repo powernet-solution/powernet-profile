@@ -48,7 +48,7 @@ export const Footer = () => {
 
 
                         {/* RIGHT */}
-                        <div data-aos="fade-up" data-aos-delay="200" suppressHydrationWarning className="flex-1 flex flex-wrap items-start justify-between gap-x-10 lg:gap-x-16 gap-y-10 lg:pl-12 text-base md:text-lg">
+                        <div data-aos="fade-up" data-aos-delay="100" suppressHydrationWarning className="flex-1 flex flex-wrap items-start justify-between gap-x-10 lg:gap-x-16 gap-y-10 lg:pl-12 text-base md:text-lg">
 
                             <div className="w-fit">
                                 <h4 className="font-semibold text-gray-900 mb-6">

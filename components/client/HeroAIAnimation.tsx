@@ -14,18 +14,25 @@ export const HeroAIAnimation = ({ children, className }: HeroAIAnimationProps) =
 
     useGSAP(() => {
         if (containerRef.current) {
-            gsap.from(containerRef.current, {
-                y: 50,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power4.out",
-                delay: 0.2
-            });
+            gsap.fromTo(containerRef.current, 
+                { 
+                    y: 50, 
+                    opacity: 0 
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    delay: 0.1,
+                    immediateRender: true
+                }
+            );
         }
     }, { scope: containerRef });
 
     return (
-        <h1 ref={containerRef} className={className}>
+        <h1 ref={containerRef} className={`${className} opacity-0`}>
             {children}
         </h1>
     );
