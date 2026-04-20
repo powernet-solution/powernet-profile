@@ -27,7 +27,11 @@ export const CTASection = () => {
                           - variant="light"   : Light pink background + red sparkles (Latest version)
                           - variant="primary" : Red background + white sparkles
                         */}
-                        <CTAButton variant="light" />
+                        <CTAButton
+                            variant="light"
+                            text="Scale with PowerNET"
+                            onClick={() => window.open('https://wa.me/6281298192099', '_blank')}
+                        />
                     </div>
                 </motion.div>
             </div>
