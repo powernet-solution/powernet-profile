@@ -21,7 +21,7 @@ export default function NetworkServicePage() {
                         <p data-aos="fade-up" data-aos-delay="200" className="text-lg text-gray-900 mb-8 max-w-screen w-[80%] mx-auto leading-relaxed">
                             Experience comprehensive end-to-end infrastructure management powered by proactive maintenance strategies. We ensure your business achieves peak performance through ultra-fast, low-latency connectivity and robust, enterprise-grade security layers.
                         </p>
-                        <div data-aos="fade-up" data-aos-delay="400">
+                        <div data-aos="fade-up" data-aos-delay="400" className="flex justify-center">
                             <ScrollButton
                                 targetId="network-solutions"
                                 variant="primary"

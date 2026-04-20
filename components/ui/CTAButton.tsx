@@ -90,7 +90,7 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
                 hover: { scale: 1.05 },
                 tap: { scale: 0.95 }
             }}
-            className={`relative overflow-hidden flex items-center gap-4 px-12 py-6 rounded-full font-medium text-2xl transition-all cursor-pointer group ${currentStyle.button} ${currentStyle.shadow} ${currentStyle.hoverShadow} ${className}`}
+            className={`relative overflow-hidden flex items-center gap-3 md:gap-4 px-8 py-4 md:px-12 md:py-6 rounded-full font-medium text-lg md:text-2xl transition-all cursor-pointer group ${currentStyle.button} ${currentStyle.shadow} ${currentStyle.hoverShadow} ${className}`}
             onClick={onClick || (() => window.location.href = '#')}
         >
             {mounted && currentStyle.sparkles && <Sparkles colorClass={currentStyle.sparkles} />}
@@ -110,7 +110,7 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
 
             <span className="relative z-10">{text}</span>
             <motion.i
-                className="fi fi-rr-comment leading-none text-xl relative z-10 transition-transform duration-300"
+                className="fi fi-rr-comment leading-none text-lg md:text-xl relative z-10 transition-transform duration-300"
                 variants={{
                     hover: { x: 5, rotate: 12 }
                 }}

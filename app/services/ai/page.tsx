@@ -26,25 +26,25 @@ export default function AIServicePage() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
 
                             {/* Left Column: Content */}
-                            <div className="max-w-full">
-                                <HeroAIAnimation className="text-2xl w-full md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.25] mb-6">
+                            <div className="max-w-full flex flex-col items-center text-center lg:items-start lg:text-left">
+                                <HeroAIAnimation className="text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.25] mb-6">
                                     Enterprise AI Architectures:
                                     Engineering Precision, Automating Complexity
                                 </HeroAIAnimation>
-                                <p data-aos="fade-up" data-aos-delay="200" className="text-xl w-[90%] text-gray-900 mb-8 font-medium leading-relaxed">
+                                <p data-aos="fade-up" data-aos-delay="200" className="text-base md:text-lg lg:text-xl w-[90%] md:w-[80%] lg:w-[90%] mx-auto lg:mx-0 text-gray-900 mb-8 font-medium leading-relaxed">
                                     PowerNET deploys <span className="font-bold text-gray-900">custom-engineered AI models</span>—from Computer Vision to Advanced NLP—built for high-stakes environments. We integrate high-accuracy automation directly into your infrastructure while ensuring total data sovereignty and zero workflow disruption.
                                 </p>
 
-                                <div data-aos="fade-up" data-aos-delay="400" className="flex flex-wrap items-center gap-4">
+                                <div data-aos="fade-up" data-aos-delay="400" className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                                     <ScrollButton
                                         targetId="ai-solutions"
-                                        className="inline-flex items-center justify-center text-sm font-semibold text-primary bg-primary-50 px-6 py-3 rounded-full hover:bg-primary-100 transition-colors gap-0"
+                                        className="inline-flex items-center justify-center text-xs md:text-sm font-semibold text-primary bg-primary-50 px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-primary-100 transition-colors gap-0"
                                     >
                                         <span className="h-fit pr-2">Learn More</span>
                                         <i className="fi fi-rr-info leading-none h-fit pt-[1px]"></i>
                                     </ScrollButton>
                                     <a href="https://wa.me/6281298192099" target="_blank" rel="noopener noreferrer">
-                                        <div className="px-6 py-3 bg-primary text-white hover:bg-primary/90 rounded-full font-medium transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-0 text-sm">
+                                        <div className="px-5 py-2.5 md:px-6 md:py-3 bg-primary text-white hover:bg-primary/90 rounded-full font-medium transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-0 text-xs md:text-sm">
                                             <span className="pr-2">Free Consultation</span>
                                             <i className="fi fi-rr-call-outgoing leading-none h-fit pt-[1px]"></i>
                                         </div>
