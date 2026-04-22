@@ -3,9 +3,10 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
-import { PRODUCTS_DATA } from "@/constants/content";
+import { PRODUCTS_DATA, CONTACT_INFO } from "@/constants/content";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
+import { MessageSquareText } from "lucide-react";
 import Image from "next/image";
 import KelolaBG from "@/public/image/products/kelolabg.svg";
 import KelolaMockup from "@/public/image/products/kelolamockup.svg";
@@ -22,7 +23,6 @@ function ProductsContent() {
     const type = searchParams.get("type");
 
     const [activeProduct, setActiveProduct] = useState<"limbah" | "pintar">("pintar");
-    const [email, setEmail] = useState("");
 
     useEffect(() => {
         if (type === "pintar" || type === "limbah") {
@@ -31,38 +31,13 @@ function ProductsContent() {
     }, [type]);
 
     const data = PRODUCTS_DATA[activeProduct];
+    const getWhatsAppLink = () => {
+        const phone = "6281298192099";
+        const message = activeProduct === "limbah"
+            ? "Halo, saya tertarik menggunakan Kelola untuk operasional pengelolaan limbah. Mohon informasi fitur, alur implementasi, dan akses awalnya."
+            : "Halo, saya tertarik dengan Pintar. Ingin tahu lebih lanjut cara kerjanya dan bagaimana bisa mulai.";
 
-    const [isSubmitting, setIsSubmitting] = useState(false);
-
-    const handleFormSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        try {
-            const response = await fetch("/api/send-email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email,
-                    productName: data.name,
-                }),
-            });
-
-            if (!response.ok) {
-                throw new Error("Failed to send email");
-            }
-
-            console.log(`Interest in ${data.name} from: ${email}`);
-            alert(`Thank you! We will contact you soon regarding your interest in ${data.name}.`);
-            setEmail("");
-        } catch (error) {
-            console.error("Submission error:", error);
-            alert("Sorry, there was an error sending your request. Please try again later.");
-        } finally {
-            setIsSubmitting(false);
-        }
+        return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     };
 
     return (
@@ -75,34 +50,15 @@ function ProductsContent() {
                     <h1 className="text-3xl md:text-5xl font-bold text-[#A62F54] mb-4">
                         Early Access to Our Advanced Solutions
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-900 font-medium mx-auto mb-12">
-                        Kelola and Pintar are currently in final development. Sign up to receive a technical brief and priority deployment once we launch.
-                    </p>
-
-                    {/* Email Capture Form - Exact Flex Layout */}
-                    <form
-                        onSubmit={handleFormSubmit}
-                        className="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-2xl mx-auto"
-                    >
-                        <div className="w-full sm:w-[400px]">
-                            <input
-                                type="email"
-                                required
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="yourname@company.co.id"
-                                className="w-full px-6 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 text-gray-800 placeholder:text-gray-400"
-                            />
-                        </div>
+                    <div className="flex justify-center mt-12">
                         <button
-                            type="submit"
-                            disabled={isSubmitting}
-                            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#A62F54] hover:bg-[#8A2645] text-white px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                            onClick={() => window.open(getWhatsAppLink(), "_blank")}
+                            className="flex items-center justify-center gap-3 bg-[#A62F54] hover:bg-[#8A2645] text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-[#A62F54]/20 text-lg"
                         >
-                            <span>{isSubmitting ? "Sending..." : "Send Email"}</span>
-                            {!isSubmitting && <img src="/icon/icon-wrapper-h.svg" alt="icon" className="w-5 h-5" />}
+                            <span>Interested? Talk to us</span>
+                            <MessageSquareText size={24} />
                         </button>
-                    </form>
+                    </div>
                 </div>
             </section>
 
