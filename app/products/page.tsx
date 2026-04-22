@@ -58,7 +58,7 @@ function ProductsContent() {
                             onClick={() => window.open(getWhatsAppLink(), "_blank")}
                             className="flex items-center justify-center gap-3 bg-[#A62F54] hover:bg-[#8A2645] text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-[#A62F54]/20 text-lg"
                         >
-                            <span className="text-sm font-bold">Interested? Talk to us</span>
+                            <span className="font-bold">Interested? Talk to us</span>
                             <MessageSquareText size={14} />
                         </button>
                     </div>
