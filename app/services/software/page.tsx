@@ -30,7 +30,7 @@ export default function SoftwareServicePage() {
                             <div data-aos="fade-up" data-aos-delay="200" className="flex flex-wrap items-center gap-4">
                                 <button
                                     className="inline-flex items-center justify-center text-sm font-semibold text-primary bg-primary-50 px-6 py-3 rounded-full hover:bg-primary-100 transition-colors gap-0"
-                                    onClick={() => window.location.href = '/'}
+                                    onClick={() => document.getElementById('precision-engineering')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
                                     <span className="h-fit pr-2">Learn More</span>
                                     <i className="fi fi-rr-info leading-none h-fit pt-[1px]"></i>
@@ -64,7 +64,7 @@ export default function SoftwareServicePage() {
             </section>
 
             {/* Precision Engineering Section */}
-            <section className="bg-white py-20 md:py-32 border-t border-gray-50">
+            <section id="precision-engineering" className="bg-white py-20 md:py-32 border-t border-gray-50">
                 <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                     <div data-aos="fade-up" className="text-center max-w-7xl mx-auto mb-20">
                         <h2 className="text-2xl md:text-4xl font-semibold text-primary mb-4">
