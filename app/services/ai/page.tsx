@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { Info, Phone } from "lucide-react";
+import { CONTACT_INFO } from '@/constants/content';
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Button } from "@/components/ui/Button";
 import aiimage1 from "@/public/image/ai/aiimage1.svg";
@@ -43,7 +44,7 @@ export default function AIServicePage() {
                                         <span className="h-fit pr-2">Learn More</span>
                                         <i className="fi fi-rr-info leading-none h-fit pt-[1px]"></i>
                                     </ScrollButton>
-                                    <a href="https://wa.me/6281298192099" target="_blank" rel="noopener noreferrer">
+                                    <a href={CONTACT_INFO.whatsapp} target="_blank" rel="noopener noreferrer">
                                         <div className="px-5 py-2.5 md:px-6 md:py-3 bg-primary text-white hover:bg-primary/90 rounded-full font-medium transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-0 text-xs md:text-sm">
                                             <span className="pr-2">Free Consultation</span>
                                             <i className="fi fi-rr-call-outgoing leading-none h-fit pt-[1px]"></i>

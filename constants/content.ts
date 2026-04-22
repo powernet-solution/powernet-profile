@@ -113,3 +113,14 @@ export const PARTNERS = [
     { name: "WIKA", logo: "/logos/partners/WIKAlogo.svg" },
     { name: "Powernet Partner", logo: "/logos/partners/Defaultlogo.svg" },
 ];
+
+export const CONTACT_INFO = {
+    phone: "+62 812-9819-2099",
+    email: "marketing@powernet.co.id",
+    whatsapp: "https://wa.me/6281298192099?text=Halo!%20Terima%20kasih%20sudah%20menghubungi%20Powernet.%20%0AAda%20yang%20bisa%20kami%20bantu%20hari%20ini%3F%20Silakan%20tinggalkan%20pesan%20Anda%2C%20tim%20kami%20akan%20segera%20merespons%20secepat%20mungkin.",
+    address: "Menara Kadin Indonesia Jl.H.R.Rasuna said Blok X-5.KAV. 2-3, Jakarta Selatan, DKI Jakarta",
+    social: {
+        instagram: "https://www.instagram.com/powernet.id",
+        linkedin: "https://www.linkedin.com/company/powernetsolution/",
+    }
+};

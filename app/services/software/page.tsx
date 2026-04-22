@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/sections/Navbar"
 import { Footer } from "@/components/sections/Footer"
 import { Button } from "@/components/ui/Button"
+import { CONTACT_INFO } from "@/constants/content"
 import { Workflow } from "@/components/sections/Workflow"
 import Image from "next/image"
 import { ChevronDown, CheckSquare } from "lucide-react"
@@ -37,7 +38,7 @@ export default function SoftwareServicePage() {
                                 <Button
                                     variant="primary"
                                     className="px-6 py-3 bg-primary text-white hover:bg-primary/90 rounded-full font-medium transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-0 text-sm"
-                                    onClick={() => window.open('https://wa.me/6281298192099', '_blank')}
+                                    onClick={() => window.open(CONTACT_INFO.whatsapp, '_blank')}
                                 >
                                     <span className="pr-2">Free Consultation</span>
                                     <i className="fi fi-rr-call-outgoing leading-none h-fit pt-[1px]"></i>

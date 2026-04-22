@@ -5,11 +5,36 @@ import React, { useState } from "react";
 export const EmailCaptureForm = () => {
     const [email, setEmail] = useState("");
 
-    const handleFormSubmit = (e: React.FormEvent) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleFormSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(`Email captured: ${email}`);
-        alert(`Thank you! We will contact you soon.`);
-        setEmail("");
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email,
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to send email");
+            }
+
+            console.log(`Email captured: ${email}`);
+            alert(`Thank you! We will contact you soon.`);
+            setEmail("");
+        } catch (error) {
+            console.error("Submission error:", error);
+            alert("Sorry, there was an error sending your request. Please try again later.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -29,10 +54,11 @@ export const EmailCaptureForm = () => {
             </div>
             <button
                 type="submit"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#A62F54] hover:bg-[#8A2645] text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                disabled={isSubmitting}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#A62F54] hover:bg-[#8A2645] text-white px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-                <span>Send Email</span>
-                <img src="/icon/icon-wrapper-h.svg" alt="icon" className="w-5 h-5" />
+                <span>{isSubmitting ? "Sending..." : "Send Email"}</span>
+                {!isSubmitting && <img src="/icon/icon-wrapper-h.svg" alt="icon" className="w-5 h-5" />}
             </button>
         </form>
     );

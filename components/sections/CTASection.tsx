@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CTAButton } from "@/components/ui/CTAButton";
+import { CONTACT_INFO } from "@/constants/content";
 
 export const CTASection = () => {
     return (
@@ -30,7 +31,7 @@ export const CTASection = () => {
                         <CTAButton
                             variant="light"
                             text="Scale with PowerNET"
-                            onClick={() => window.open('https://wa.me/6281298192099', '_blank')}
+                            onClick={() => window.open(CONTACT_INFO.whatsapp, '_blank')}
                         />
                     </div>
                 </motion.div>
