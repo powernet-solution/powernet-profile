@@ -56,10 +56,10 @@ function ProductsContent() {
                     <div className="flex justify-center mt-12">
                         <button
                             onClick={() => window.open(getWhatsAppLink(), "_blank")}
-                            className="flex items-center justify-center gap-3 bg-[#A62F54] hover:bg-[#8A2645] text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-[#A62F54]/20 text-lg"
+                            className="inline-flex items-center justify-center text-sm font-semibold bg-[#A62F54] hover:bg-[#8A2645] text-white px-6 py-3 rounded-full transition-all gap-0"
                         >
-                            <span className="font-bold">Interested? Talk to us</span>
-                            <MessageSquareText size={14} />
+                            <span className="h-fit pr-2">Interested? Talk to us</span>
+                            <MessageSquareText size={16} className="leading-none h-fit pt-[1px]" />
                         </button>
                     </div>
                 </div>
