@@ -50,6 +50,9 @@ function ProductsContent() {
                     <h1 className="text-3xl md:text-5xl font-bold text-[#A62F54] mb-4">
                         Early Access to Our Advanced Solutions
                     </h1>
+                    <p className="text-lg md:text-xl text-gray-900 font-medium mx-auto mb-12">
+                        Kelola and Pintar are currently in final development. Sign up to receive a technical brief and priority deployment once we launch.
+                    </p>
                     <div className="flex justify-center mt-12">
                         <button
                             onClick={() => window.open(getWhatsAppLink(), "_blank")}
