@@ -47,10 +47,10 @@ export default function SoftwareServicePage() {
                         </div>
 
                         {/* Right Column: Image */}
-                        <div className="w-full max-w-2xl lg:ml-auto">
+                        <div data-aos="fade-left" data-aos-delay="300" className="w-full max-w-2xl lg:ml-auto">
                             <div className="relative w-full aspect-[853/566] overflow-hidden rounded-3xl">
                                 <Image
-                                    src="/image/Frame 287.svg"
+                                    src="/image/webp/software/softwarehero.webp"
                                     alt="Software Solutions Showcase"
                                     fill
                                     priority
@@ -129,7 +129,7 @@ export default function SoftwareServicePage() {
                     <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
                         <div data-aos="fade-right" className="flex-1 w-full relative aspect-[4/3] md:aspect-square lg:aspect-[16/10] overflow-hidden rounded-3xl">
                             <Image
-                                src="/image/softwareimage2.svg"
+                                src="/image/webp/software/softwareimage2.webp"
                                 alt="Enterprise Web Development"
                                 fill
                                 className="object-cover"
@@ -167,7 +167,7 @@ export default function SoftwareServicePage() {
                     <div className="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-24">
                         <div data-aos="fade-left" className="flex-1 w-full relative aspect-[4/3] md:aspect-square lg:aspect-[16/10] overflow-hidden rounded-3xl">
                             <Image
-                                src="/image/softwareimage1.svg"
+                                src="/image/webp/software/softwareimage1.webp"
                                 alt="Scalable Mobile Solutions"
                                 fill
                                 className="object-cover"

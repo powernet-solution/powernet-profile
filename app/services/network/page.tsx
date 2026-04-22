@@ -2,9 +2,9 @@ import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { ChevronRight, Check } from "lucide-react";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import networkimage1 from "@/public/image/networkimage1.svg";
-import networkimage2 from "@/public/image/networkimage2.svg";
-import networkimage3 from "@/public/image/networkimage3.svg";
+import networkimage1 from "@/public/image/webp/network/networkimage1.webp";
+import networkimage2 from "@/public/image/webp/network/networkimage2.webp";
+import networkimage3 from "@/public/image/webp/network/networkimage3.webp";
 import { ScrollButton } from "@/components/ui/ScrollButton";
 
 export default function NetworkServicePage() {

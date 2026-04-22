@@ -8,10 +8,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 import { MessageSquareText } from "lucide-react";
 import Image from "next/image";
-import KelolaBG from "@/public/image/products/kelolabg.svg";
-import KelolaMockup from "@/public/image/products/kelolamockup.svg";
-import PintarBG from "@/public/image/products/Frame 52215.svg";
-import PintarMockup from "@/public/image/products/pintarmockup.svg";
+import KelolaBG from "@/public/image/webp/product/kelolabg.webp";
+import KelolaMockup from "@/public/image/webp/product/kelolamockup.webp";
+import PintarBG from "@/public/image/webp/product/pintarbg.webp";
+import PintarMockup from "@/public/image/webp/product/pintarmockup.webp";
 
 const productImages = {
     limbah: { bg: KelolaBG, mockup: KelolaMockup },
