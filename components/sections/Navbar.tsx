@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Button } from "../ui/Button";
-import { NAV_LINKS } from "@/constants/content";
+import { NAV_LINKS, CONTACT_INFO } from "@/constants/content";
 import Image from "next/image";
 
 export const Navbar = () => {
@@ -68,7 +68,7 @@ export const Navbar = () => {
                         <Button
                             variant="outline"
                             className="text-sm font-medium px-6 py-2.5 flex items-center justify-center gap-0"
-                            onClick={() => window.location.href = '/'}
+                            onClick={() => window.open(CONTACT_INFO.whatsapp, "_blank")}
                         >
                             <span>Consult Now</span>
                             <i className="fi fi-rr-call-outgoing leading-none"></i>
@@ -114,7 +114,7 @@ export const Navbar = () => {
                     <Button
                         variant="primary"
                         className="w-full mt-4 flex items-center justify-center gap-0"
-                        onClick={() => window.location.href = '/'}
+                        onClick={() => window.open(CONTACT_INFO.whatsapp, "_blank")}
                     >
                         <span>Consult Now</span>
                         <i className="fi fi-rr-call-outgoing leading-none"></i>
