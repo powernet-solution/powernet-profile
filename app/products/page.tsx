@@ -164,7 +164,7 @@ function ProductsContent() {
                             </div>
 
                             {/* Right Column: Card/Image with Layering */}
-                            <div className={`relative w-full overflow-hidden transition-all duration-500 flex items-center justify-center ${activeProduct === "limbah" ? "bg-[#fef8e6]" : "bg-[#FFF2E9]"}`}>
+                            <div className={`relative w-full aspect-[1.4/1] sm:aspect-[16/9] lg:aspect-auto min-h-[300px] sm:min-h-[400px] lg:min-h-0 overflow-hidden transition-all duration-500 flex items-center justify-center ${activeProduct === "limbah" ? "bg-[#fef8e6]" : "bg-[#FFF2E9]"}`}>
                                 {/* Background Layer */}
                                 <div className="absolute inset-0 z-0">
                                     <AnimatePresence mode="wait">
@@ -187,7 +187,7 @@ function ProductsContent() {
                                 </div>
 
                                 {/* Mockup Layer */}
-                                <div className="relative z-10 w-full h-full p-6 md:p-10 lg:p-12">
+                                <div className="relative z-10 w-full h-full p-4 sm:p-10 lg:p-12">
                                     <AnimatePresence mode="wait">
                                         <motion.div
                                             key={`${activeProduct}-mockup`}
